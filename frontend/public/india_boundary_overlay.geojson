@@ -1,0 +1,120 @@
+{
+  "type": "FeatureCollection",
+  "name": "India Official Northern Boundary",
+  "description": "India's official international boundary in the J&K and Ladakh region. Includes the full extent of Jammu & Kashmir, Gilgit-Baltistan, and Aksai Chin as sovereign Indian territory per the Constitution of India. This overlay draws a SOLID line over any dotted/disputed boundaries from foreign map tile providers.",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "India-Pakistan International Boundary (J&K Sector)",
+        "description": "Official boundary through erstwhile J&K including POK and Gilgit-Baltistan",
+        "type": "international_boundary",
+        "style": "solid"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [74.63, 32.50],
+          [74.20, 33.20],
+          [73.90, 33.80],
+          [73.60, 34.30],
+          [73.30, 34.80],
+          [73.50, 35.20],
+          [73.80, 35.50],
+          [74.10, 35.80],
+          [74.50, 36.10],
+          [74.80, 36.40],
+          [75.10, 36.60],
+          [75.40, 36.80],
+          [75.70, 36.95],
+          [76.00, 37.05],
+          [76.30, 37.10],
+          [76.80, 37.00],
+          [77.05, 36.95],
+          [77.50, 36.90],
+          [77.80, 36.60]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "India-China International Boundary (Ladakh / Aksai Chin Sector)",
+        "description": "Official boundary through Aksai Chin as claimed by India",
+        "type": "international_boundary",
+        "style": "solid"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [77.80, 36.60],
+          [78.00, 36.40],
+          [78.30, 36.10],
+          [78.60, 35.80],
+          [78.90, 35.50],
+          [79.10, 35.20],
+          [79.30, 34.90],
+          [79.50, 34.60],
+          [79.70, 34.40],
+          [79.90, 34.20],
+          [80.00, 34.00],
+          [80.10, 33.80],
+          [80.20, 33.50],
+          [80.10, 33.20],
+          [80.00, 33.00],
+          [79.80, 32.80],
+          [79.60, 32.60],
+          [79.40, 32.40],
+          [79.20, 32.20],
+          [79.00, 31.90],
+          [78.80, 31.60],
+          [78.70, 31.40],
+          [78.60, 31.20],
+          [78.70, 31.00],
+          [78.80, 30.80],
+          [79.00, 30.60],
+          [79.20, 30.40],
+          [79.50, 30.30],
+          [79.90, 30.20],
+          [80.20, 30.10],
+          [80.40, 30.00]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "India-China International Boundary (Arunachal Pradesh Sector)",
+        "description": "McMahon Line — India's official boundary with China in the northeast",
+        "type": "international_boundary",
+        "style": "solid"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [91.60, 27.80],
+          [91.90, 27.90],
+          [92.20, 28.00],
+          [92.50, 28.10],
+          [92.80, 28.20],
+          [93.10, 28.30],
+          [93.40, 28.35],
+          [93.70, 28.40],
+          [94.00, 28.50],
+          [94.30, 28.55],
+          [94.60, 28.50],
+          [94.90, 28.40],
+          [95.20, 28.30],
+          [95.50, 28.20],
+          [95.80, 28.10],
+          [96.10, 28.00],
+          [96.40, 27.90],
+          [96.70, 28.00],
+          [97.00, 27.90],
+          [97.30, 27.80],
+          [97.40, 27.60]
+        ]
+      }
+    }
+  ]
+}
