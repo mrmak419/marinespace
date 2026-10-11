@@ -1,0 +1,96 @@
+{
+  "type": "FeatureCollection",
+  "name": "Indian Marine Protected Areas (MPAs)",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "gulf_of_mannar",
+        "name": "Gulf of Mannar Marine National Park",
+        "state": "Tamil Nadu",
+        "restriction": "NO_FISHING",
+        "description": "Biosphere reserve & coral reef sanctuary. Commercial and mechanized fishing strictly prohibited."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [78.80, 9.25],
+            [79.25, 9.35],
+            [79.35, 9.15],
+            [78.90, 8.80],
+            [78.50, 8.60],
+            [78.25, 8.75],
+            [78.80, 9.25]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "gahirmatha",
+        "name": "Gahirmatha Marine Sanctuary",
+        "state": "Odisha",
+        "restriction": "SEASONAL_NO_FISHING",
+        "description": "World's largest Olive Ridley sea turtle nesting ground. Mechanized fishing prohibited November to May."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [86.75, 20.75],
+            [87.15, 20.85],
+            [87.25, 20.55],
+            [86.85, 20.45],
+            [86.75, 20.75]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sundarbans_marine",
+        "name": "Sundarbans Marine Protected Zone",
+        "state": "West Bengal",
+        "restriction": "RESTRICTED",
+        "description": "UNESCO World Heritage Site. Trawling prohibited, traditional non-mechanized fishing regulated."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [88.20, 21.60],
+            [89.10, 21.65],
+            [89.15, 21.15],
+            [88.35, 21.10],
+            [88.20, 21.60]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "malvan",
+        "name": "Malvan Marine Sanctuary",
+        "state": "Maharashtra",
+        "restriction": "CORAL_PROTECTION",
+        "description": "Coral reefs and marine flora sanctuary. Mechanized boat anchoring and netting prohibited."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [73.40, 16.08],
+            [73.50, 16.08],
+            [73.50, 16.00],
+            [73.40, 16.00],
+            [73.40, 16.08]
+          ]
+        ]
+      }
+    }
+  ]
+}

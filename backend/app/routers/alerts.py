@@ -1,4 +1,5 @@
 from fastapi import APIRouter
+from app.tools.alerts import fetch_all_alerts
 
 router = APIRouter()
 
@@ -6,26 +7,23 @@ router = APIRouter()
 @router.get("/")
 async def get_active_alerts():
     """Get all active marine alerts (INCOIS + NDMA + IMD)."""
-    # TODO: Implement alert fetching in Phase 2
+    alerts = await fetch_all_alerts()
     return {
-        "alerts": [],
-        "message": "Alert system - coming in Phase 2",
+        "status": "success",
+        "count": len(alerts),
+        "alerts": alerts,
     }
 
 
 @router.get("/high-wave")
 async def get_high_wave_alerts():
     """Get INCOIS high wave alerts."""
-    return {"alerts": [], "source": "INCOIS"}
+    all_alerts = await fetch_all_alerts()
+    return {"alerts": [a for a in all_alerts if "INCOIS" in a.get("source", "")], "source": "INCOIS"}
 
 
 @router.get("/cyclone")
 async def get_cyclone_alerts():
     """Get IMD cyclone bulletins."""
-    return {"alerts": [], "source": "IMD RSMC"}
-
-
-@router.get("/tsunami")
-async def get_tsunami_alerts():
-    """Get INCOIS ITEWC tsunami alerts."""
-    return {"alerts": [], "source": "INCOIS ITEWC"}
+    all_alerts = await fetch_all_alerts()
+    return {"alerts": [a for a in all_alerts if "IMD" in a.get("source", "")], "source": "IMD RSMC"}

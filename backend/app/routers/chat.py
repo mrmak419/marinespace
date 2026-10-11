@@ -1,6 +1,7 @@
 from fastapi import APIRouter
 from pydantic import BaseModel
 from typing import Optional
+from app.agents.orchestrator import orca_orchestrator
 
 router = APIRouter()
 
@@ -12,25 +13,12 @@ class ChatRequest(BaseModel):
     longitude: Optional[float] = None
 
 
-class ChatResponse(BaseModel):
-    response: str
-    sources: list[str] = []
-    map_data: Optional[dict] = None
-    safety_score: Optional[str] = None
-
-
-@router.post("/", response_model=ChatResponse)
+@router.post("/")
 async def chat(request: ChatRequest):
     """Process a chat message through the ORCA agent system."""
-    # TODO: Connect to LangGraph agent orchestrator in Phase 3
-    return ChatResponse(
-        response=f"Received: '{request.message}'. Agent system not connected yet (Phase 3).",
-        sources=["system"],
+    result = await orca_orchestrator.process_query(
+        message=request.message,
+        user_lat=request.latitude,
+        user_lon=request.longitude
     )
-
-
-@router.get("/stream")
-async def chat_stream():
-    """SSE endpoint for streaming chat responses."""
-    # TODO: Implement SSE streaming in Phase 3
-    return {"message": "SSE streaming endpoint - coming in Phase 3"}
+    return result

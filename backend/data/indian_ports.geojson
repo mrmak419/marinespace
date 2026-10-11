@@ -1,0 +1,201 @@
+{
+  "type": "FeatureCollection",
+  "name": "Major Indian Fishing Harbours",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "vizag",
+        "name": "Visakhapatnam Fishing Harbour",
+        "state": "Andhra Pradesh",
+        "coast": "East Coast",
+        "type": "Major Harbour",
+        "capacity_boats": 700,
+        "major_species": ["Yellowfin Tuna", "Ribbonfish", "Shrimp", "Mackerel"]
+      },
+      "geometry": { "type": "Point", "coordinates": [83.3000, 17.6900] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "chennai",
+        "name": "Chennai Fishing Harbour (Kasimedu)",
+        "state": "Tamil Nadu",
+        "coast": "East Coast",
+        "type": "Major Harbour",
+        "capacity_boats": 850,
+        "major_species": ["Seer Fish", "Barracuda", "Sardine", "Crab"]
+      },
+      "geometry": { "type": "Point", "coordinates": [80.2940, 13.1250] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "kochi",
+        "name": "Cochin Fisheries Harbour (Thoppumpady)",
+        "state": "Kerala",
+        "coast": "West Coast",
+        "type": "Major Harbour",
+        "capacity_boats": 600,
+        "major_species": ["Indian Oil Sardine", "Mackerel", "Tuna", "Squid"]
+      },
+      "geometry": { "type": "Point", "coordinates": [76.2420, 9.9650] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "mumbai",
+        "name": "Sassoon Docks (Mumbai)",
+        "state": "Maharashtra",
+        "coast": "West Coast",
+        "type": "Major Harbour",
+        "capacity_boats": 1000,
+        "major_species": ["Bombay Duck", "Pomfret", "Prawns", "Hilsa"]
+      },
+      "geometry": { "type": "Point", "coordinates": [72.8250, 18.9140] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "mangalore",
+        "name": "Mangalore Old Port (Bunder)",
+        "state": "Karnataka",
+        "coast": "West Coast",
+        "type": "Major Harbour",
+        "capacity_boats": 500,
+        "major_species": ["Mackerel", "Sardine", "Squid", "Cuttlefish"]
+      },
+      "geometry": { "type": "Point", "coordinates": [74.8350, 12.8620] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "paradip",
+        "name": "Paradip Fishing Harbour",
+        "state": "Odisha",
+        "coast": "East Coast",
+        "type": "Major Harbour",
+        "capacity_boats": 650,
+        "major_species": ["Hilsa", "Pomfret", "Ribbonfish", "Shrimp"]
+      },
+      "geometry": { "type": "Point", "coordinates": [86.6110, 20.3120] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "veraval",
+        "name": "Veraval Fisheries Harbour",
+        "state": "Gujarat",
+        "coast": "West Coast",
+        "type": "Major Commercial Port",
+        "capacity_boats": 1200,
+        "major_species": ["Ribbonfish", "Croaker", "Cuttlefish", "Pomfret"]
+      },
+      "geometry": { "type": "Point", "coordinates": [70.3620, 20.9030] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "porbandar",
+        "name": "Porbandar Fishing Port",
+        "state": "Gujarat",
+        "coast": "West Coast",
+        "type": "Major Harbour",
+        "capacity_boats": 800,
+        "major_species": ["Seer Fish", "Tuna", "Shark", "Catfish"]
+      },
+      "geometry": { "type": "Point", "coordinates": [69.6010, 21.6420] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "tuticorin",
+        "name": "Thoothukudi Fishing Harbour",
+        "state": "Tamil Nadu",
+        "coast": "East Coast (Gulf of Mannar)",
+        "type": "Major Harbour",
+        "capacity_boats": 550,
+        "major_species": ["Sardine", "Emperor", "Snapper", "Squid"]
+      },
+      "geometry": { "type": "Point", "coordinates": [78.1610, 8.7950] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "kakinada",
+        "name": "Kakinada Fishing Harbour",
+        "state": "Andhra Pradesh",
+        "coast": "East Coast",
+        "type": "Major Harbour",
+        "capacity_boats": 600,
+        "major_species": ["Shrimp", "Tuna", "Scylla Crabs", "Mackerel"]
+      },
+      "geometry": { "type": "Point", "coordinates": [82.2610, 16.9830] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "neendakara",
+        "name": "Neendakara Harbour (Kollam)",
+        "state": "Kerala",
+        "coast": "West Coast",
+        "type": "Major Harbour",
+        "capacity_boats": 750,
+        "major_species": ["Karikkadi Shrimp", "Sardine", "Anchovy", "Tuna"]
+      },
+      "geometry": { "type": "Point", "coordinates": [76.5380, 8.9350] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "beypore",
+        "name": "Beypore Harbour (Kozhikode)",
+        "state": "Kerala",
+        "coast": "West Coast",
+        "type": "Historic Coastal Port",
+        "capacity_boats": 400,
+        "major_species": ["Mackerel", "Sole Fish", "Squid", "Prawns"]
+      },
+      "geometry": { "type": "Point", "coordinates": [75.8030, 11.1640] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "nagapattinam",
+        "name": "Nagapattinam Fishing Harbour",
+        "state": "Tamil Nadu",
+        "coast": "East Coast (Coromandel)",
+        "type": "Major Harbour",
+        "capacity_boats": 450,
+        "major_species": ["Mackerel", "Lesser Sardine", "Tuna", "Barracuda"]
+      },
+      "geometry": { "type": "Point", "coordinates": [79.8450, 10.7620] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "digha",
+        "name": "Digha / Shankarpur Fishing Harbour",
+        "state": "West Bengal",
+        "coast": "Northern Bay of Bengal",
+        "type": "Major Harbour",
+        "capacity_boats": 500,
+        "major_species": ["Hilsa", "Bhetki", "Pomfret", "Tiger Prawns"]
+      },
+      "geometry": { "type": "Point", "coordinates": [87.5140, 21.6250] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "portblair",
+        "name": "Junglighat Fishing Harbour (Port Blair)",
+        "state": "Andaman & Nicobar Islands",
+        "coast": "Andaman Sea",
+        "type": "Island Harbour",
+        "capacity_boats": 250,
+        "major_species": ["Yellowfin Tuna", "Skipjack", "Snapper", "Grouper"]
+      },
+      "geometry": { "type": "Point", "coordinates": [92.7420, 11.6620] }
+    }
+  ]
+}
