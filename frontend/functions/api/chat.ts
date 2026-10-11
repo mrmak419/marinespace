@@ -22,11 +22,21 @@ const KNOWN_PORTS: Record<string, [number, number, string]> = {
   digha: [21.625, 87.514, "Digha"],
   andaman: [11.662, 92.742, "Port Blair, Andaman"],
   "port blair": [11.662, 92.742, "Port Blair, Andaman"],
+  kerala: [9.965, 76.242, "Kerala Coast"],
+  gujarat: [20.903, 70.362, "Gujarat Coast"],
+  odisha: [20.312, 86.611, "Odisha Coast"],
+  bengal: [21.625, 87.514, "West Bengal Coast"],
 };
 
 export async function onRequestPost(context: { request: Request; env: Env }) {
   try {
-    const body: any = await context.request.json();
+    let body: any = {};
+    try {
+      body = await context.request.json();
+    } catch (e) {
+      body = { message: "" };
+    }
+
     const message: string = body.message || "";
     let lat = 17.69;
     let lon = 83.30;
@@ -50,12 +60,13 @@ export async function onRequestPost(context: { request: Request; env: Env }) {
     }
 
     // 1. Fetch live Open-Meteo Weather & Marine simultaneously
+    const headers = { "User-Agent": "MarineSpace/1.0 (ORCA Marine Intelligence Cloudflare Edge)" };
     const weatherUrl = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&hourly=temperature_2m,wind_speed_10m,wind_gusts_10m,precipitation,visibility,cape,weather_code&wind_speed_unit=kn&timezone=Asia/Kolkata&forecast_days=2`;
     const marineUrl = `https://marine-api.open-meteo.com/v1/marine?latitude=${lat}&longitude=${lon}&hourly=wave_height,wave_period,swell_wave_height,ocean_current_velocity,sea_surface_temperature&timezone=Asia/Kolkata&forecast_days=2`;
 
     const [weatherRes, marineRes] = await Promise.all([
-      fetch(weatherUrl).then(r => r.json()).catch(() => ({})),
-      fetch(marineUrl).then(r => r.json()).catch(() => ({})),
+      fetch(weatherUrl, { headers }).then(r => r.json()).catch(() => ({})),
+      fetch(marineUrl, { headers }).then(r => r.json()).catch(() => ({})),
     ]);
 
     // Parse Weather Metrics
@@ -118,7 +129,7 @@ export async function onRequestPost(context: { request: Request; env: Env }) {
     }
 
     // 3. Gemini LLM Reasoning
-    const geminiKey = context.env.GEMINI_API_KEY;
+    const geminiKey = context.env.GEMINI_API_KEY || "AQ.Ab8RN6KWaQXSQ2xd3a8RXs8oICdqzqEtzb6jeQ2A5Jplu8LRQg";
     let llmResponse = "";
 
     if (geminiKey) {
@@ -162,7 +173,7 @@ Provide a complete, structured, empathetic advisory in Markdown format. Mention 
       const icon = level === "SAFE" ? "🟢" : level === "CAUTION" ? "🟡" : "🔴";
       llmResponse = `### ${icon} Verdict: ${level} (Safety Score: ${finalScore}/100)
 
-**Observed Sea Conditions off ${loc_name}:**
+**Observed Sea Conditions off ${locName}:**
 • **Wave Height:** ${wave.toFixed(2)}m (12h Peak: ${maxWave.toFixed(2)}m)
 • **Wind Speed:** ${wind.toFixed(1)} knots (Gusts: ${gust.toFixed(1)} knots)
 • **Sea Surface Temp:** ${sst}°C | **Currents:** ${current.toFixed(2)} knots
