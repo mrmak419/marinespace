@@ -1,0 +1,68 @@
+{
+  "type": "FeatureCollection",
+  "name": "India International Maritime Boundary Lines (IMBL)",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "imbl_sri_lanka",
+        "name": "India-Sri Lanka IMBL (Palk Strait & Gulf of Mannar)",
+        "countries": ["India", "Sri Lanka"],
+        "critical_caution": true,
+        "warning": "CRITICAL WARNING: Approaching Sri Lankan International Maritime Boundary Line. Indian fishing vessels must maintain a safe buffer distance."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [79.510, 10.080],
+          [79.440, 9.770],
+          [79.380, 9.500],
+          [79.250, 9.350],
+          [79.100, 9.100],
+          [78.850, 8.800],
+          [78.550, 8.400],
+          [78.200, 8.000]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "imbl_pakistan",
+        "name": "India-Pakistan Maritime Boundary (Sir Creek / Arabian Sea)",
+        "countries": ["India", "Pakistan"],
+        "critical_caution": true,
+        "warning": "CRITICAL WARNING: Proximity to Pakistan Maritime Boundary. High risk of vessel interception."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [68.160, 23.630],
+          [67.800, 23.400],
+          [67.300, 23.000],
+          [66.500, 22.200],
+          [65.500, 21.000]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "imbl_bangladesh",
+        "name": "India-Bangladesh Maritime Boundary (Bay of Bengal)",
+        "countries": ["India", "Bangladesh"],
+        "critical_caution": true,
+        "warning": "Approaching Bangladesh Maritime Boundary."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [89.150, 21.450],
+          [89.250, 20.800],
+          [89.400, 20.000],
+          [89.700, 19.000]
+        ]
+      }
+    }
+  ]
+}
